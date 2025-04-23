@@ -8,13 +8,13 @@ class AnimatedSleepRing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      size: const Size(160, 160),
+      size: const Size(110, 110), // Shrunk canvas
       painter: SleepRingPainter(progress, Theme.of(context).colorScheme.primary),
       child: Center(
         child: Text(
           '${(progress * 100).toInt()}%',
           style: TextStyle(
-            fontSize: 24,
+            fontSize: 22,
             fontWeight: FontWeight.bold,
             color: Theme.of(context).colorScheme.primary,
           ),
@@ -34,7 +34,7 @@ class SleepRingPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final Paint basePaint = Paint()
       ..color = color.withOpacity(0.15)
-      ..strokeWidth = 12
+      ..strokeWidth = 8
       ..style = PaintingStyle.stroke;
 
     final Paint progressPaint = Paint()
@@ -43,7 +43,7 @@ class SleepRingPainter extends CustomPainter {
         startAngle: 0.0,
         endAngle: 2 * pi,
       ).createShader(Rect.fromCircle(center: size.center(Offset.zero), radius: size.width / 2))
-      ..strokeWidth = 12
+      ..strokeWidth = 8
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
