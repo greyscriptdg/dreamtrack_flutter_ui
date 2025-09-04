@@ -2,7 +2,9 @@
 
 **DreamTrack** is a beautifully animated **UI-only** sleep tracker app built with Flutter. It showcases modern frontend design using custom widgets, smooth animations, and a manual dark mode toggle — **no backend, no logic**, just pure visual perfection.
 
-![DreamTrack Preview](preview.gif) <!-- Replace with an actual GIF or image if needed -->
+<p align="center">
+  <img src="preview.gif" width="450" alt="DreamTrack UI demo"/>
+</p>
 
 ---
 
